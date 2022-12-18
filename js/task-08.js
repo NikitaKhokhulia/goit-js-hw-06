@@ -13,11 +13,12 @@ function handleFormSubmit(event) {
 
   const formData = new FormData(event.currentTarget);
   formData.forEach((value, name) => {
-    console.log({ name, value });
     if (value === "" || name === "") {
       alert("Введіть логін і пароль");
     }
+    console.log([name, value]);
   });
 
   form.reset();
+  console.log(form);
 }
