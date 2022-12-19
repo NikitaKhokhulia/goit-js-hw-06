@@ -8,8 +8,6 @@ const form = document.querySelector(".login-form");
 const inputEmail = form.email;
 const inputPassword = form.password;
 
-console.log(inputPassword.value);
-
 form.addEventListener("submit", handleFormSubmit);
 
 function handleFormSubmit(event) {
@@ -19,10 +17,9 @@ function handleFormSubmit(event) {
     alert("Введіть логін і пароль");
   } else {
     const formData = {
-      mailText: inputEmail.value,
-      passwordText: inputPassword.value,
+      email: inputEmail.value,
+      password: inputPassword.value,
     };
-    return formData;
   }
 
   form.reset();

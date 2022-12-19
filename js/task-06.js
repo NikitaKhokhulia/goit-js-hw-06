@@ -13,11 +13,12 @@
 
 const inputEl = document.querySelector("input");
 const checkValidInput = (ev) => {
-  if (ev.currentTarget.value.length === Number(inputEl.dataset.length)) {
-    inputEl.classList.add("valid");
-  } else {
-    inputEl.classList.remove("valid");
+  if (ev.currentTarget.value.length !== Number(inputEl.dataset.length)) {
     inputEl.classList.add("invalid");
+    inputEl.classList.remove("valid");
+  } else {
+    inputEl.classList.add("valid");
+    inputEl.classList.remove("invalid");
   }
 };
 inputEl.addEventListener("blur", checkValidInput);

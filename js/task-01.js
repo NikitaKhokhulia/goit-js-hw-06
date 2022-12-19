@@ -4,8 +4,6 @@
 const allItems = document.querySelectorAll(".item");
 const allItemsQty = allItems.length;
 
-console.log(`Number of categories: ${allItemsQty}`);
-
 allItems.forEach((element) => {
   const elementTitle = element.querySelector("h2").textContent;
   const oneTitleElements = element.querySelectorAll("li");
