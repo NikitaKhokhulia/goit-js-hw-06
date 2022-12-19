@@ -24,5 +24,3 @@ const IngredientsMarkUp = ingredients.map((element) => {
 });
 
 ingredientsListEl.append(...IngredientsMarkUp);
-
-console.log(...IngredientsMarkUp);

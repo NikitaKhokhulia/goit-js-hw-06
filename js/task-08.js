@@ -22,6 +22,8 @@ function handleFormSubmit(event) {
       mailText: inputEmail.value,
       passwordText: inputPassword.value,
     };
+    return formData;
   }
+
   form.reset();
 }

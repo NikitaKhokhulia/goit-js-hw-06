@@ -11,7 +11,4 @@ allItems.forEach((element) => {
   const oneTitleElements = element.querySelectorAll("li");
 
   const oneTitleElementsQty = oneTitleElements.length;
-
-  console.log(`Category: ${elementTitle}`);
-  console.log(`Elements: ${oneTitleElementsQty}`);
 });

@@ -23,7 +23,5 @@ const handleClickBtnIncrement = () => {
   spanEl.textContent = counterValue;
 };
 
-console.log(counterValue);
-
 decrementBtnEl.addEventListener("click", handleClickBtnDecrement);
 incrementBtnEl.addEventListener("click", handleClickBtnIncrement);
