@@ -20,7 +20,7 @@ function handleFormSubmit(event) {
       email: inputEmail.value,
       password: inputPassword.value,
     };
+    console.log(formData);
   }
-
   form.reset();
 }
