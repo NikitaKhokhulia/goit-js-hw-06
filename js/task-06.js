@@ -16,11 +16,8 @@ const checkValidInput = (ev) => {
   if (ev.currentTarget.value.length === Number(inputEl.dataset.length)) {
     inputEl.classList.add("valid");
   } else {
+    inputEl.classList.remove("valid");
     inputEl.classList.add("invalid");
   }
-
-  console.log(ev.currentTarget.value.length);
-  console.log(Number(inputEl.dataset.length));
-  console.log(inputEl);
 };
 inputEl.addEventListener("blur", checkValidInput);

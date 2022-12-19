@@ -5,20 +5,23 @@
 // Выведи обьект с введенными данными в консоль и очисти значения полей формы методом reset.
 
 const form = document.querySelector(".login-form");
+const inputEmail = form.email;
+const inputPassword = form.password;
+
+console.log(inputPassword.value);
 
 form.addEventListener("submit", handleFormSubmit);
 
 function handleFormSubmit(event) {
   event.preventDefault();
 
-  const formData = new FormData(event.currentTarget);
-  formData.forEach((value, name) => {
-    if (value === "" || name === "") {
-      alert("Введіть логін і пароль");
-    }
-    console.log([name, value]);
-  });
-
+  if (inputEmail.value === "" || inputPassword.value === "") {
+    alert("Введіть логін і пароль");
+  } else {
+    const formData = {
+      mailText: inputEmail.value,
+      passwordText: inputPassword.value,
+    };
+  }
   form.reset();
-  console.log(form);
 }
